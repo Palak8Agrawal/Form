@@ -1,77 +1,145 @@
-*{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body{
     background-color: rgb(237, 234, 237);
 }
 
-h3{
-    background-color: white;
-    margin-bottom: 10px;
-    margin-left: 29px;
-    border-radius: 10px;
-    width: 311px;
-    padding: 10px;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top {
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 97%;
+  padding: 10px;
+  font-family: "Roboto", serif;
+}
+
+form {
+  font-family: "Roboto", serif;
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stack the divs vertically */
+  /* align-items: center; Center the divs horizontally */
+  justify-content: space-around; /* Center the divs vertically */
+  width: 800px;
+  margin: auto;
 }
 
 .required-label {
-    color: red; /* Star color */
-  }
-
-.section{
-    background-color: white;
-    border-radius: 10px;
-    width: 311px;
-    height: 154px;
-    padding: 5%;
-    margin-bottom: 10px;
-}
-.section1{
-    background-color: white;
-    border-radius: 10px;
-    width: 311px;
-    height: 160px;
-    padding: 5%;
-    margin-bottom: 10px;
-}
-.section2{
-    background-color: white;
-    border-radius: 10px;
-    width: 311px;
-    height: 236px;
-    padding: 5%;
-    margin-bottom: 10px;
-}
-.section3{
-    background-color: white;
-    border-radius: 10px;
-    width: 311px;
-    height: 16px;
-    padding: 5%;
-    margin-bottom: 10px;
+  color: red; /* Star color */
 }
 
-.section4{
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 10px;
+  width: 93%;
+  min-height: 16px;
+  padding: 25px;
+  margin-bottom: 10px;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-div label {
+  margin-bottom: 10px;
+}
+
+.input-div input{
+    border: none;
+    border-bottom: solid 1px gainsboro;
+}
+
+.input-div input:focus{
+    outline: none;
+    border-bottom: solid 1px purple !important;
+}
+
+.section select{
+    border: none;
+    border-bottom: solid 1px gainsboro;
+}
+
+.section select:focus{
+    outline: none;
+    border-bottom: solid 1px purple !important;
+}
+
+.section label{
     margin-bottom: 10px;
 }
 
+input[type="radio"] {
+  margin-right: 10px; /* Adjust the spacing as needed */
+}
+
+.section p{
+    margin-bottom: 20px;
+}
+
+/* .section2 {
+  background-color: white;
+  border-radius: 10px;
+  width: 311px;
+  height: 268px;
+  padding: 7%;
+  margin-bottom: 10px;
+} */
+
+input[type="checkbox"] {
+  margin-right: 10px; /* Adjust the spacing as needed */
+}
+
+/* .section3 {
+  background-color: white;
+  border-radius: 10px;
+  width: 311px;
+  height: 16px;
+  padding: 7%;
+  margin-bottom: 10px;
+} */
+
+.section4 {
+  margin-bottom: 10px;
+}
 
 .section4 input[type="submit"] {
-    border-radius: 5px; /* Adjust value as needed */
-    padding: 10px 20px;  /* Optional: Add some padding for a better look */
-    background-color: rgb(109, 6, 109); /* Optional: Add a background color */
-    color: white; /* Optional: Text color */
-    border: none; /* Optional: Remove border for a cleaner look */
-    cursor: pointer; /* Optional: Change cursor to pointer */
+  border-radius: 5px; /* Adjust value as needed */
+  padding: 10px 20px; /* Optional: Add some padding for a better look */
+  background-color: rgb(109, 6, 109); /* Optional: Add a background color */
+  color: white; /* Optional: Text color */
+  border: none; /* Optional: Remove border for a cleaner look */
+  cursor: pointer; /* Optional: Change cursor to pointer */
 }
 
 .section4 input[type="submit"]:hover {
-    background-color: #0056b3; /* Optional: Change background on hover */
+  background-color: #0056b3; /* Optional: Change background on hover */
 }
 
+@media (max-width: 900px) {
+    form{
+        width: 500px;
+    }
+  }
 
+  @media (max-width: 600px) {
+    form{
+        width: 300px;
+    }
+  }
